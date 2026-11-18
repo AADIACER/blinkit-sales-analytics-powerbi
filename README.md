@@ -1,7 +1,7 @@
-# 🟡 BlinkIt Sales Analytics | Power BI Dashboard
+# 🟡 Blinkit Sales Analytics | Power BI Dashboard
 
 
-An interactive Power BI dashboard that analyses **8,500+ BlinkIt grocery sales records** by item category, outlet type, outlet size, location tier and establishment year, with KPI cards, slicers and DAX measures.
+An interactive Power BI dashboard that analyses **8,500+ Blinkit grocery sales records** by item category, outlet type, outlet size, location tier and establishment year, with KPI cards, slicers and DAX measures.
 
 ![Dashboard Preview](images/dashboard_preview.png)
 
@@ -24,7 +24,7 @@ An interactive Power BI dashboard that analyses **8,500+ BlinkIt grocery sales r
 ---
 
 ## 📖 Project Overview
-BlinkIt is a quick-commerce grocery platform. This project turns raw outlet and item-level sales data into a one-page dashboard so a business user can see **how much is sold, where, and of what**, and filter the view in a few clicks.
+Blinkit is a quick-commerce grocery platform. This project turns raw outlet and item-level sales data into a one-page dashboard so a business user can see **how much is sold, where, and of what**, and filter the view in a few clicks.
 
 **Goal:** help stakeholders understand which item types, outlet tiers and outlet formats drive sales, and how ratings and item visibility relate to them.
 
@@ -39,6 +39,8 @@ BlinkIt is a quick-commerce grocery platform. This project turns raw outlet and 
 ## 📂 Dataset
 **File:** [`data/BlinkIT_Grocery_Data.xlsx`](data/BlinkIT_Grocery_Data.xlsx): **8,523 rows × 12 columns**, 10 outlets, 16 item categories.
 
+This is a public grocery sales dataset, and its structure matches the widely used BigMart sales data. It is not Blinkit's own company data.
+
 | Column | Description |
 |---|---|
 | Item Identifier | Unique product ID |
@@ -51,7 +53,7 @@ BlinkIt is a quick-commerce grocery platform. This project turns raw outlet and 
 | Outlet Size | Small / Medium / High |
 | Outlet Location Type | Tier 1 / Tier 2 / Tier 3 |
 | Outlet Type | Grocery Store / Supermarket Type1 / Type2 / Type3 |
-| Sales | Sales amount |
+| Sales | Sales amount (currency and unit are not specified in the source data) |
 | Rating | Customer rating (1 to 5) |
 
 ## 🧹 Data Preparation
@@ -86,7 +88,7 @@ BlinkIt is a quick-commerce grocery platform. This project turns raw outlet and 
 - **Outlet size:** Medium outlets lead (~42%), then Small (~37%) and High (~21%).
 - **Fat content:** Low Fat items make up about **65%** of sales and Regular about 35%.
 - **Volume, not price, drives the differences:** average sale per item is almost the same (~140 to 142) across every tier, size and outlet type, so the groups with higher sales simply sell more items. Ratings are also very similar (about 3.95 to 3.99) everywhere.
-- **Outlet age:** the outlet established in 2018 has the highest sales (~205K, 17%) and the 2011 outlet the lowest (~78K), mostly because of the number of items sold.
+- **Outlet age:** the outlet established in 2018 has the highest sales (~205K, 17%) and the 2011 outlet the lowest (~78K), mostly because of the number of items sold. With only 10 outlets, each establishment year is mostly a single outlet, so this compares individual outlets rather than showing a trend over time.
 
 ## ✅ Recommendations
 - Prioritise stock and promotions for **Fruits and Vegetables, Snack Foods and Household**, which together drive a large share of sales.
@@ -104,7 +106,7 @@ BlinkIt is a quick-commerce grocery platform. This project turns raw outlet and 
 blinkit-sales-analytics-powerbi/
 ├── README.md
 ├── data/
-│   └── blinkit_grocery_data.xlsx
+│   └── BlinkIT_Grocery_Data.xlsx
 ├── dashboard/
 │   └── blinkit_sales_dashboard.pbix
 └── images/
@@ -114,7 +116,7 @@ blinkit-sales-analytics-powerbi/
 ## ▶️ How to Use
 1. Clone this repository
    ```bash
-   git clone https://github.com/<your-username>/blinkit-sales-analytics-powerbi.git
+   git clone https://github.com/AADIACER/blinkit-sales-analytics-powerbi.git
    ```
 2. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free, Windows only).
 3. Open `dashboard/blinkit_sales_dashboard.pbix`.
